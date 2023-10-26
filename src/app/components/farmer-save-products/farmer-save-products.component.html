@@ -1,0 +1,65 @@
+<div class="top-right">
+  <!-- on click should route to farmers home page -->
+  <span class="routes" id="back-link" [routerLink]="['/home/farmer']">Back To Home</span>
+</div>
+
+<div class="form-card">
+  <div class="title">Add/Update Products</div>
+  <form [formGroup]="saveProductForm">
+    <div class="form-group">
+      <!-- 'name' -->
+      <input type="text" placeholder="Name" formControlName="name" class="form-control" id="input-name">
+      <div class="text-danger small" id="invalid-name" *ngIf="saveProductFormControl['name'].invalid && (saveProductFormControl['name'].dirty || saveProductFormControl['name'].touched)">
+        
+        <!--  validation message for name -->
+        <span *ngIf="saveProductFormControl['name'].errors.required">
+          {{nameRequiredError}}
+        </span>
+        <span *ngIf="saveProductFormControl['name'].errors.minlength || saveProductFormControl['name'].errors.maxlength">
+          {{nameMinMaxError}}
+        </span>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <span style="margin: 0 15px">Unit</span>
+      <!-- 'unit' -->
+      <input type="radio" formControlName="unit" value="kg" placeholder="Unit" id="input-kg">kg
+      <input type="radio" formControlName="unit" value="count" placeholder="Unit" id="input-count">count
+      <input type="radio" formControlName="unit" value="ton" placeholder="Unit" id="input-ton">ton
+    </div>
+    <div class="form-group">
+      <!-- 'stock' -->
+      <input type="number" formControlName="stock" placeholder="Stock" class="form-control" id="input-stock">
+      <div class="text-danger small" id="invalid-stock" *ngIf="saveProductFormControl['stock'].invalid && (saveProductFormControl['stock'].dirty || saveProductFormControl['stock'].touched)">
+        
+        <!--  validation message for stock -->
+        <span *ngIf="saveProductFormControl['stock'].errors.required">
+          {{stockRequiredError}}
+        </span>
+        <span *ngIf="saveProductFormControl['stock'].errors.min">
+          {{stockMinError}}
+        </span>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- 'pricePerUnit' -->
+      <input type="number" formControlName="pricePerUnit" placeholder="Price Per Unit" class="form-control"
+      id="input-price">
+      <div class="text-danger small" id="invalid-price" *ngIf="saveProductFormControl['pricePerUnit'].invalid && (saveProductFormControl['pricePerUnit'].dirty || saveProductFormControl['pricePerUnit'].touched)">
+        
+        <!--  validation message for price -->
+        <span *ngIf="saveProductFormControl['pricePerUnit'].errors.required">
+          {{priceRequiredError}}
+        </span>
+        <span *ngIf="saveProductFormControl['pricePerUnit'].errors.min">
+          {{priceMinError}}
+        </span>
+
+      </div>
+    </div>
+    <!-- On clicking button, should call the 'saveProduct' fn and button should be disabled for form inputs are not valid -->
+    <button class="btn btn-info btn-submit" id="save-btn" [disabled]="saveProductForm.invalid" (click)="saveProduct(saveProductForm);">Save</button>
+  </form>
+</div>

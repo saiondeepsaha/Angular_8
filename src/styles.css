@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+.app-title {
+  color: #1c921c;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-left: 2px solid black; 
+  margin-left: 87px; 
+  height: 81px;
+}
+
+.form-card {
+  box-shadow: 1px 3px 15px 5px rgb(26 33 52 / 44%);
+  border-radius: 8px;
+  margin: auto;
+  width: 40%;
+  border: 1px solid #69696933;
+  padding: 10px;
+  height: auto;
+  padding: 30px;
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+.btn-submit {
+  width: 100%;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.pwd-field {
+  margin-right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.eye {
+  float: right;
+  border: 1px solid rgb(206 212 218);
+  border-radius: 0 5px 5px 0;
+  border-left: 0px;
+}
+
+.eye i {
+  cursor: pointer;
+}
+
+.top-right {
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.top-center {
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  right: 38em;
+}
+
+.routes {
+  float: right;
+  color: #4A6EE0;
+  font-size: large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.routes:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-info {
+  font-size: larger;
+  font-weight: bold;
+  color: blueviolet;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=radio] {
+  margin: 5px;
+}
+
+.iterate-list {
+  margin: auto;
+  text-align: center;
+}
+
+select {
+  background-color: #0062cc;
+  width: 12em;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .eye {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .eye {
+    border: none;
+  }
+  
+  .icon {
+    padding: 7px;
+    min-width: 8%;
+    min-height: 30px;
+  }
+}

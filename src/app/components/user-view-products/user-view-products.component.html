@@ -1,0 +1,81 @@
+<!-- show following div if number of products > 0 else show norecords template present at the bottom-->
+<div *ngIf="noOfProducts > 0">
+
+  <!-- show if logged in user type is 'farmers'-->
+  <div class="iterate-list" *ngIf="loggedInUser.userType === 'farmers'">
+    
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Price per unit</th>
+        <th>Stock</th>
+        <th>Status</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+      <!-- iterate the products array -->
+      <tr *ngFor="let product of products;">
+        <td>{{product.name}}</td>
+        <td>{{product['pricePerUnit'] + ' / ' + product['unit']}}</td>
+        <td>{{product.stock}}</td>
+        <td [innerHTML]="product.stock > 0 ? 'In Stock' : 'Out of stock'" [attr.class]="product.stock > 0 ? 'text-success' : 'text-danger'">
+          <!--
+            if stock > 0 show 'In Stock' and bind class name 'text-success' to td element
+            else show 'Out of stock' and bind class name 'text-danger' to td element
+          -->
+        </td>
+        <td>
+          <!-- On clicking button, should call the 'getUpdateForm' fn with current product details -->
+          <button class="btn btn-info" (click)="getUpdateForm(product);">Edit</button>
+        </td>
+        <td>
+          <!-- On clicking button, should call the 'deleteProduct' fn with current product details -->
+          <button class="btn btn-info" (click)="deleteProduct(product.id);">Remove Product</button>
+        </td>
+      </tr>
+    </table>
+    
+  </div>
+  
+  <!-- show if logged in user type is 'customers'-->
+  <div class="products" *ngIf="loggedInUser.userType === 'customers'">
+    
+    <!-- iterate the products -->
+    <div style="margin: 5px;" id="product-data" *ngFor="let product of products">
+      <div class="product-card">
+        <img src="../../../assets/basket-full-vegetables.jpg" [alt]="product.name" width="100%">
+        <h2>{{product.name}}</h2>
+        <p class="price">{{product['pricePerUnit'] + ' / ' + product['unit']}}</p>
+        <div>
+          <table>
+            <tr>
+              <td [attr.class]="product.stock > 0 ? 'text-success' : 'text-danger'">
+                <!--
+                  if stock > 0 show 'In Stock' and bind class name 'text-success' to td element
+                  else show 'Out of stock' and bind class name 'text-danger' to td element
+                -->
+                <span [innerHTML]="product.stock > 0 ? 'In Stock' : 'Out of stock'"></span>
+              </td>
+              <td>
+                <!-- On changing the input field should set the value : 'quantity' in component data -->                
+                Qty<input type="number" value="1" name="quantity" (change)="setQty($event);" style="margin-left:10px;width: 30%; border-radius: 5px;">
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          <!-- On clicking button, should call the 'buyProduct' fn with current product details -->
+          <button (click)="buyProduct(product);">Buy Now</button>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #norecords *ngIf="noOfProducts <= 0">
+  <div class="text-danger ml-5">
+    *No records found
+  </div>
+</ng-template>

@@ -1,0 +1,116 @@
+{
+  "farmers": [
+    {
+      "id": 1,
+      "name": "farmer one",
+      "mobile": "6666666666",
+      "email": "farmerone@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Farmer#1",
+      "userType": "farmers"
+    },
+    {
+      "id": 2,
+      "name": "farmer two",
+      "mobile": "7777777777",
+      "email": "farmertwo@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Farmer#2",
+      "userType": "farmers"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "customer one",
+      "mobile": "9999999999",
+      "email": "customerone@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Customer#1",
+      "userType": "customers"
+    },
+    {
+      "id": 2,
+      "name": "customer two",
+      "mobile": "6000000000",
+      "email": "customertwo@ffs.com",
+      "address": "xxx yyy zzz",
+      "password": "Customer#2",
+      "userType": "customers"
+    }
+  ],
+  "products": [
+    {
+      "name": "Plantain Stem",
+      "unit": "count",
+      "stock": 120,
+      "pricePerUnit": 25,
+      "belongsTo": 1,
+      "id": 1
+    },
+    {
+      "name": "Polished Rice",
+      "unit": "ton",
+      "stock": 60,
+      "pricePerUnit": 120,
+      "belongsTo": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Coconut",
+      "unit": "kg",
+      "stock": 100,
+      "pricePerUnit": 15,
+      "belongsTo": 2
+    },
+    {
+      "name": "React",
+      "unit": "kg",
+      "stock": 5,
+      "pricePerUnit": 25,
+      "belongsTo": 2,
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "unit": "kg",
+      "stock": 5,
+      "pricePerUnit": 7,
+      "belongsTo": 1,
+      "id": 5
+    },
+    {
+      "name": "React",
+      "unit": "kg",
+      "stock": 0,
+      "pricePerUnit": 25,
+      "belongsTo": 2,
+      "id": 6
+    },
+    {
+      "name": "TDAM",
+      "unit": "kg",
+      "stock": "7",
+      "pricePerUnit": 4,
+      "belongsTo": 1,
+      "id": 8
+    },
+    {
+      "name": "Polished Rice",
+      "unit": "kg",
+      "stock": 25,
+      "pricePerUnit": 69,
+      "belongsTo": 1,
+      "id": 9
+    },
+    {
+      "name": "Pizza",
+      "unit": "count",
+      "stock": 5,
+      "pricePerUnit": 1000,
+      "belongsTo": 1,
+      "id": 10
+    }
+  ]
+}

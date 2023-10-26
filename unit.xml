@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 118.0.5993.89 (Windows 10)" package="unit" timestamp="2023-10-26T03:24:20" id="0" hostname="DESKTOP-A06UR0U" tests="23" errors="0" failures="0" time="1.321">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/118.0.5993.89 Safari/537.36"/>
+  </properties>
+  <testcase name="UserViewProductsComponent - Testing with different values #should display product details" time="0.19" classname=".UserViewProductsComponent - Testing with different values"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Update Functionality - URL with product details #save button click to call service" time="0.119" classname=".FarmerSaveProductsComponent - Testing Update Functionality - URL with product details"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Update Functionality - URL with product details #checking the parsed value of product in form inputs" time="0.068" classname=".FarmerSaveProductsComponent - Testing Update Functionality - URL with product details"/>
+  <testcase name="AuthGuard #canActivate should return true for loggedin users and route to login page for loggedout users" time="0.028" classname=".AuthGuard"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Add Functionality - URL without product details #validation messages for form input" time="0.084" classname=".FarmerSaveProductsComponent - Testing Add Functionality - URL without product details"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Add Functionality - URL without product details #save button click to call service" time="0.073" classname=".FarmerSaveProductsComponent - Testing Add Functionality - URL without product details"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Add Functionality - URL without product details #Back To Home -  router" time="0.064" classname=".FarmerSaveProductsComponent - Testing Add Functionality - URL without product details"/>
+  <testcase name="FarmersApiService getProducts API request" time="0.019" classname=".FarmersApiService"/>
+  <testcase name="UserHomePageComponent - Farmer and Customer Home #should menu and view products only exist for customer home" time="0.061" classname=".UserHomePageComponent - Farmer and Customer Home"/>
+  <testcase name="UserHomePageComponent - Farmer and Customer Home #should menu and view products only exist for farmer home" time="0.051" classname=".UserHomePageComponent - Farmer and Customer Home"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Update Functionality - URL with product details 2 #save button click to call service" time="0.062" classname=".FarmerSaveProductsComponent - Testing Update Functionality - URL with product details 2"/>
+  <testcase name="FarmerSaveProductsComponent - Testing Update Functionality - URL with product details 2 #checking the parsed value of product in form inputs" time="0.054" classname=".FarmerSaveProductsComponent - Testing Update Functionality - URL with product details 2"/>
+  <testcase name="UserLoginComponent - Testing with different values #form title - loginUser - set local storage" time="0.067" classname=".UserLoginComponent - Testing with different values"/>
+  <testcase name="UserLoginComponent #loginUser - set local storage" time="0.053" classname=".UserLoginComponent"/>
+  <testcase name="UserLoginComponent form -  title, input validation messages and disable button" time="0.05" classname=".UserLoginComponent"/>
+  <testcase name="UserLoginComponent toggle eye icon" time="0.044" classname=".UserLoginComponent"/>
+  <testcase name="UserMenuOptionsComponent - Login menus #admin menus - routing" time="0.029" classname=".UserMenuOptionsComponent - Login menus"/>
+  <testcase name="UserMenuOptionsComponent - Login menus #login menus - routing" time="0.03" classname=".UserMenuOptionsComponent - Login menus"/>
+  <testcase name="UserViewProductsComponent - Customers enter quantity and buy the product" time="0.038" classname=".UserViewProductsComponent - Customers"/>
+  <testcase name="UserViewProductsComponent - Customers #should call service ngOnInit and display product details" time="0.035" classname=".UserViewProductsComponent - Customers"/>
+  <testcase name="UserViewProductsComponent - Farmer #should call service ngOnInit and display product details" time="0.037" classname=".UserViewProductsComponent - Farmer"/>
+  <testcase name="UserViewProductsComponent - Farmer #getUpdateForm should route to farmer-add-product" time="0.029" classname=".UserViewProductsComponent - Farmer"/>
+  <testcase name="UserViewProductsComponent - Farmer #deleteProduct should call service" time="0.036" classname=".UserViewProductsComponent - Farmer"/>
+  <system-out>
+    <![CDATA[Chrome Headless 118.0.5993.89 (Windows 10) LOG: '{"id":2,"unit":"kg","pricePerUnit":120,"name":"Polished Rice","stock":50,"belongsTo":1}'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: Object{message: 'Product is shipped, it will reach you soon.'}
+,Chrome Headless 118.0.5993.89 (Windows 10) ALERT: 'Product updated'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: '{"id":2,"unit":"kg","pricePerUnit":120,"name":"Polished Rice","stock":50,"belongsTo":1}'
+,Chrome Headless 118.0.5993.89 (Windows 10) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Chrome Headless 118.0.5993.89 (Windows 10) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: null
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: null
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: Object{message: 'Product added'}
+,Chrome Headless 118.0.5993.89 (Windows 10) ALERT: 'Product added'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: null
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: '{"id":3,"unit":"count","pricePerUnit":15,"name":"Coconut","stock":0,"belongsTo":2}'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: Object{message: 'Product is shipped, it will reach you soon.'}
+,Chrome Headless 118.0.5993.89 (Windows 10) ALERT: 'Product updated'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: '{"id":3,"unit":"count","pricePerUnit":15,"name":"Coconut","stock":0,"belongsTo":2}'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: Object{message: 'Product is shipped, it will reach you soon.'}
+,Chrome Headless 118.0.5993.89 (Windows 10) ALERT: 'Product is shipped, it will reach you soon.'
+,Chrome Headless 118.0.5993.89 (Windows 10) LOG: Object{message: 'Product removed'}
+,Chrome Headless 118.0.5993.89 (Windows 10) ALERT: 'Product removed'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -1,0 +1,21 @@
+<div class="top-right">
+  <!-- on change to call 'selectedOption' fn-->
+  <select name="userOption" (change)="selectedOption($event);">
+
+    <!-- show following option if user is logged in -->
+    <option *ngIf="isLoggedIn === 'true'" selected disabled>
+      <!-- display user name in uppercase -->
+      {{userName | uppercase}}
+    </option>
+
+    <!-- show following option if user is not logged in -->
+    <option *ngIf="isLoggedIn !== 'true'" selected disabled>Switch to</option>
+
+    <!-- iterate menus array and bind in value-->
+    <option [value]="menu.name" *ngFor="let menu of menus">
+      <!-- menu name-->
+      {{menu.name}}
+    </option>
+
+  </select>
+</div>
